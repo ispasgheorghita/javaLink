@@ -1,0 +1,12 @@
+CREATE TABLE `banca`.`utilizator` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nume` VARCHAR(100) NULL,
+  `prenume` VARCHAR(100) NULL,
+  `telefon` CHAR(10) NULL,
+  `email` VARCHAR(100) NULL,
+  `status` TINYINT(1) NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
+  UNIQUE INDEX `telefon_UNIQUE` (`telefon` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
